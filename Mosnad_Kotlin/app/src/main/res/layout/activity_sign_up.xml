@@ -13,10 +13,16 @@
         android:gravity="center"
         android:padding="20dp"
         android:orientation="vertical">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Sign Up"
+            style="@style/TextAppearance.AppCompat.Headline"
+            android:textStyle="bold"
             android:textAlignment="center"/>
         <EditText
             android:id="@+id/memberNameEditText"
@@ -46,12 +52,13 @@
             android:hint="Password Confirmation"
             android:inputType="textPassword"/>
         <FrameLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <Button
                 android:id="@+id/signUpButton"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/custom_button"
                 android:text="Sign Up"/>
             <ProgressBar
                 android:id="@+id/progressBar"
@@ -60,13 +67,28 @@
                 android:layout_height="wrap_content"
                 android:visibility="gone"/>
         </FrameLayout>
-        <TextView
-            android:id="@+id/haveAccountTextView"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:text="Have an account?"
-            android:textColor="@color/purple_200"/>
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:text="Have an account?"/>
+            <TextView
+                android:id="@+id/haveAccountTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="10dp"
+                android:text="Login"
+                android:textColor="@color/primary_color"/>
+        </LinearLayout>
 
     </LinearLayout>
 </ScrollView>

@@ -44,6 +44,7 @@ if (mysqli_num_rows($result) === 1) {
             $output['response'] = "false";
             $output['message'] = "Error creating account: " . mysqli_error($conn);
         }
+        echo json_encode($output);
     }
 }
 ?>
